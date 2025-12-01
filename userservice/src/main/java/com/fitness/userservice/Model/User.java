@@ -15,7 +15,7 @@ import java.time.LocalDateTime;
 public class User {
     // uuid = universal unique identifier,it is globally unique value and random,
     //we don't need to set in manually otherwise there is a chance for duplicate.
-    //commiting something
+    //commiting something..
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
