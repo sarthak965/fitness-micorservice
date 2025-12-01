@@ -6,15 +6,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 // GetMapping is shortcut for @RequestMapping(method = RequestMethod.GET)
 @RestController
-@RequestMapping("/api/users")
+@RequestMapping("/api")
 public class UserController {
-    @GetMapping("/{userId}")
-    public ResponseEntity<UserResponse> getUserProfile() {
-        return "";
-    }
-
-    @GetMapping("/{register}")
-    public ResponseEntity<> register() {
-        return "";
-    }
+//    @GetMapping("/{userId}")
+//    public ResponseEntity<UserResponse> getUserProfile() {
+//        return "";
+//    }
+//
+//    @GetMapping("/{register}")
+//    public ResponseEntity<> register() {
+//        return "";
+//    }
 }
