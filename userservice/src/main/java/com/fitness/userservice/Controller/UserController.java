@@ -8,13 +8,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api/users")
 public class UserController {
-    @GetMapping("/{userId}")
-    public ResponseEntity<UserResponse> getUserProfile() {
-        return "";
-    }
+//    @GetMapping("/{userId}")
+//    public ResponseEntity<UserResponse> getUserProfile() {
+//        return "";
+//    }
 
-    @GetMapping("/{register}")
-    public ResponseEntity<> register() {
-        return "";
-    }
+//    @GetMapping("/{register}")
+//    public ResponseEntity<> register() {
+//        return "";
+//    }
 }
