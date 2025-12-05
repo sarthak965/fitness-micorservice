@@ -8,8 +8,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface UserRepository extends JpaRepository<User,String> {
-
-    boolean existsByEmail(@NotBlank(message = "email is required") @Email(message = "Invalid Email Format") String email);
+    boolean existsByEmail(String email);
 }
 //Spring Data JPA automatically provides the actual class (implementation) at runtime.
 // by making an interface we are basically defining that we want this operations, not their implementations

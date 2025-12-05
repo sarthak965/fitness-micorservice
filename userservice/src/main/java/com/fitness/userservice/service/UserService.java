@@ -18,14 +18,16 @@ public class UserService {
         // all these getter and setter are  generated using data annotation, which comes from lombok
         User user = new User();
         user.setEmail(request.getEmail());
+
         user.setPassword(request.getPassword());
+        user.setId(request.getId());
         user.setFirstName(request.getFirstName());
         user.setLastName(request.getLastName());
         User savedUser = repository.save(user);
         UserResponse userResponse = new UserResponse();
-        userResponse.setId(savedUser.getId());
         userResponse.setPassword(savedUser.getPassword());
         userResponse.setEmail(savedUser.getEmail());
+        userResponse.setId(savedUser.getId());
         userResponse.setFirstName(savedUser.getFirstName());
         userResponse.setLastName(savedUser.getLastName());
         userResponse.setCreatedAt(savedUser.getCreatedAt());
@@ -36,10 +38,10 @@ public class UserService {
         User user = repository.findById(userId)
                 .orElseThrow(() -> new RuntimeException("User not found"));
         UserResponse userResponse = new UserResponse();
-        userResponse.setId(user.getId());
         userResponse.setPassword(user.getPassword());
         userResponse.setEmail(user.getEmail());
         userResponse.setFirstName(user.getFirstName());
+        userResponse.setId(user.getId());
         userResponse.setLastName(user.getLastName());
         userResponse.setCreatedAt(user.getCreatedAt());
         userResponse.setUpdatedAt(user.getUpdatedAt());

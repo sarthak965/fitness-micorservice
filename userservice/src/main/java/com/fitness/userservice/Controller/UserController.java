@@ -27,7 +27,7 @@ public class UserController {
     // valid annotations tells the spring that before running the controller method, first check if the incoming
     // data follows the validation rules that we defined in the model class
     // validation rules like notnull,size,min,email, etc
-    @PostMapping("/{register}")
+    @PostMapping("/register")
     public ResponseEntity<UserResponse> register(@Valid @RequestBody RegisterRequest request) {
         return ResponseEntity.ok(userService.register(request));
     }
