@@ -16,7 +16,7 @@ import tools.jackson.databind.ext.javatime.deser.key.LocalDateKeyDeserializer;
 import java.time.LocalDateTime;
 import java.util.Map;
 
-@Document(collection = "activites")
+@Document(collection = "activities")
 @Data
 @Builder
 @AllArgsConstructor
