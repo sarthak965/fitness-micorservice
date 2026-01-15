@@ -18,8 +18,13 @@ public class ActivityController {
     public ResponseEntity<ActivityResponse> trackActivity(@RequestBody ActivityRequest request) {
         return ResponseEntity.ok(activityService.trackActivity(request));
     }
-    @GetMapping("/{id}")
-    public ResponseEntity<List<ActivityResponse>> getUserActivities(@PathVariable String id) {
+    @GetMapping
+    public ResponseEntity<List<ActivityResponse>> getUserActivities(@RequestHeader("X-User-ID") String id) {
         return ResponseEntity.ok(activityService.getUserActivities(id));
+    }
+    // yo
+    @GetMapping("/{activityId}")
+    public ResponseEntity<ActivityResponse> getActivity(@PathVariable String activityId) {
+        return ResponseEntity.ok(activityService.getActivityById(activityId));
     }
 }

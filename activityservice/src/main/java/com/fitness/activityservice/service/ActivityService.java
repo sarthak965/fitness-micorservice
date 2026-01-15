@@ -53,4 +53,11 @@ public class ActivityService {
         }
         return activityResponses;
     }
+    public ActivityResponse getActivityById(String activityId) {
+        Activity activity = repository.findById(activityId)
+                .orElseThrow(()-> new RuntimeException("Does not exist"));
+        ActivityResponse activityResponse = mapToResponse(activity);
+        return activityResponse;
+
+    }
 }
