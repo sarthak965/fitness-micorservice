@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @Document(collection = "recommendation")
-@Datagit
+@Data
 @Builder
 public class Recommendation {
     private String id;
